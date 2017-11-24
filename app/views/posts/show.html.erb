@@ -2,6 +2,8 @@
 <%= @post.title %><br>
 <%= @post.content %>
 
-<%= @post.comments %>
+<% @post.comments.each do |c| %>
+  <%= c %><br>
+<% end %>
 
 <%= @post.users %>
