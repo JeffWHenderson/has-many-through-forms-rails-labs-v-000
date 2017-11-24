@@ -1,8 +1,6 @@
 <%= @category.name %>
 
 <%= Post.all.each do |p| %>
-<% p.categories.each do |c| %>
  <%= link_to p.title, post_path(p) %><br>
- <% end %>
 <% end %>
 <%-# p.title if p.categories.include?(@category) -%>
