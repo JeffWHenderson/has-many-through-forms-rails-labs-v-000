@@ -2,6 +2,6 @@
 
 <%= Post.all.each do |p| %>
 
-  <%= p.title if p.categories.include?(@category) %>
+  <%= p.title if p.categories.include?(@category) %><br>
 <% end %>
 <%-# p.title if p.categories.include?(@category) -%>
