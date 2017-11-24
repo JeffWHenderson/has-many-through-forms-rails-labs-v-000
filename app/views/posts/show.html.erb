@@ -1,6 +1,10 @@
 <h1><%= @post.title %></h1>
 <h2><%= @post.content %></h2>
 
+<% @post.comments.each do |comment| %>
+  <%= comment.content %>
+<% end %>
+
 comments: <br>
 
 <% @post.users.uniq.each do |u| %>
