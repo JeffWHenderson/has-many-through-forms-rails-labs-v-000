@@ -11,12 +11,12 @@
 <% end %>
 
 
-Create a new comment:
+Create a new comment:<br>
 <%= form_for @comment do |f| %>
   <%= f.label "Content" %>
-  <%= f.text_area :content %>
-  <%= f.hidden_field :post_id %>
-  <br>
+  <%= f.text_area :content %><br>
+  <%= f.hidden_field :post_id %><br>
+  
   <%= f.label :user_id, "Select your username" %>
   <%= f.collection_select :user_id, User.all, :id, :username,  {include_blank: true} %>
   <%= f.label :user, "Or, create a username for this comment" %>
