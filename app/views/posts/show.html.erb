@@ -19,10 +19,12 @@ Create a new comment:<br>
   
   <%= f.label :user_id, "Select your username" %>
   <%= f.collection_select :user_id, User.all, :id, :username,  {include_blank: true} %><br><br>
+
   <%= f.label :user, "Or, create a username for this comment" %>
+
   <%= f.fields_for :user, @comment.build_user do |user| %>
     <%= user.text_field :username %>
     <%= user.text_field :email %>
   <% end %>
-  <%= f.submit %>
+  <br><%= f.submit %>
 <% end %>
