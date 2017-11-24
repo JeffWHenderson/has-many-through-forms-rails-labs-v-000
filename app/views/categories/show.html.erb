@@ -1,6 +1,6 @@
 <%= @category.name %>
 
-<%= Post.all.map do |p| %>
+<%= Post.all.each do |p| %>
   <% p.categories.each do |c| %>
    <%= p.title if c == @category %>
    <% end %>
