@@ -10,9 +10,6 @@ comments: <br>
 
 <% @post.users.uniq.each do |u| %>
   <%= link_to u.username, user_path(u) %>
-  <% u.posts.select { |p| p == @post }.each do |user_post| %>
-    <%= user_post.content %>
-  <% end %>
 <% end %>
 
 <% @post.comments.each do |c| %>
