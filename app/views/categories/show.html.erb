@@ -2,7 +2,7 @@
 
 <%= Post.all.map do |p| %>
   <% p.categories.each do |c| %>
-   <%= c %>
+   <%= p.title if c == @category %>
    <% end %>
 <% end %>
 <%-# p.title if p.categories.include?(@category) -%>
