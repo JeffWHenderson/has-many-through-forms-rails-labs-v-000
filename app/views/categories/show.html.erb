@@ -2,7 +2,7 @@
 
 <%= Post.all.each do |p| %>
 <% p.categories.each do |c| %>
- <%= p.title if c == @category %><br>
+ <%= link_to p.title, post_path(p) if c == @category %><br>
  <% end %>
 <% end %>
 <%-# p.title if p.categories.include?(@category) -%>
