@@ -2,10 +2,12 @@
 <%= @post.title %><br>
 <%= @post.content %>
 
+comments: <br>
 <% @post.comments.each do |c| %>
   <%= c.content %><br>
 <% end %>
 
+Users that commented: <br>
 <% @post.users.each do |u| %>
   <%= link_to u.username, user_path(u) %><br>
 <% end %>
