@@ -1,5 +1,5 @@
 <%= @category.name %>
 
 <%= Post.all.map do |p| %>
-  <%= p.title if p.category.include? { @category }
+  <%= p.title if p.titls %>
 <% end %>
