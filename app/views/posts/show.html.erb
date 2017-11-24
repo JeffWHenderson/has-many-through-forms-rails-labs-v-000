@@ -3,9 +3,9 @@
 <%= @post.content %>
 
 <% @post.comments.each do |c| %>
-  <%= c %><br>
+  <%= c.content %><br>
 <% end %>
 
 <% @post.users.each do |u| %>
-<%= u %><br>
+<%= link_to u.username, user_path(u) %><br>
 <% end %>
