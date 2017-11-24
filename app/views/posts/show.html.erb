@@ -6,4 +6,6 @@
   <%= c %><br>
 <% end %>
 
-<%= @post.users %>
+<% @post.users.each do |u| %>
+<%= u %><br>
+<% end %>
