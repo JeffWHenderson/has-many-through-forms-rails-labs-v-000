@@ -1,8 +1,7 @@
 <%= @category.name %>
 
 <%= Post.all.each do |p| %>
-  <% p.categories.each do |c| %>
-   <%= p.title if c == @category %>
-   <% end %>
+
+  <%= p.title if p.categories.include?(@category) %>
 <% end %>
 <%-# p.title if p.categories.include?(@category) -%>
