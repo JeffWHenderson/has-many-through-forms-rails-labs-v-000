@@ -7,5 +7,5 @@
 <% end %>
 
 <% @post.users.each do |u| %>
-<%= link_to u.username, user_path(u) %><br>
+  <%= link_to u.username, user_path(u) %><br>
 <% end %>
